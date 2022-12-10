@@ -1,0 +1,60 @@
+checkout.html
+
+hide and reveal infos
+
+form-wrapper -> form =user-info + shipping - info
+payment-info
+
+
+
+
+
+// plan 1
+1. In checkout.html we are checking , if product is needed to be deliver or not
+
+2. If its digital , so no shiiping, so hide shiping info
+
+
+// plan 2
+
+1. if user not logged in, then show the hiiden user form
+
+
+//plan 3
+1. if user not logged in, and , product is digital 
+2. so , no shiping form, no user form ,
+3. so hide whole form -wrapper
+
+
+1. Now, show only payment-nfi
+
+
+
+
+
+
+
+//plan 4
+
+ form submitted -> hide form button
+ show -> payment-info
+ click payment  button -> formData()
+ formdata() -> saves shiping info and userInfo
+ sends these infor -> sever -> POST  '/process_order"
+ Format -> JSON.stringify
+
+
+
+ Server sends resposnse -> Client gest resposnse
+ After succeful resposnse from Server
+ client -> alert(' Done') -> removes the cookie -> redirect to Store page
+
+
+
+server side operations
+1.loads the data 
+2.checking the user authentication
+3.matching client total with database total
+4.varify total and save order 
+5. save Shipping adress Model in database
+
